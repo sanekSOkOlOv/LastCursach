@@ -1,0 +1,69 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.btn-go-to-cars {
+    margin-bottom: 20px;
+}
+
+/* Стили для заголовка "Bikes List" */
+.page-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Стили для таблицы */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    /* Стили для заголовков таблицы */
+.table th {
+    background-color: #343a40;
+    color: #fff;
+    padding: 8px;
+    text-align: left;
+}
+
+    /* Стили для строк таблицы */
+    .table td {
+        padding: 8px;
+    }
+
+/* Стили для кнопок действий */
+.action-buttons .btn {
+    margin-right: 5px;
+}
+
+/* Стили для кнопки удаления */
+.delete-button {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.centered {
+    text-align: center;
+}

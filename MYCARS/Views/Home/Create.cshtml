@@ -1,0 +1,36 @@
+﻿@model MYCARS.Models.Bike
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create New Bike</title>
+</head>
+<body>
+    <h1>Create New Bike</h1>
+    <form asp-action="Create" method="post">
+        <div>
+            <label asp-for="name">Name:</label>
+            <input asp-for="name" />
+            <span asp-validation-for="name"></span>
+        </div>
+        <div>
+            <label asp-for="raiting">Rating:</label>
+            <input asp-for="raiting" />
+            <span asp-validation-for="raiting"></span>
+        </div>
+        <div>
+            <label asp-for="speed">Speed:</label>
+            <input asp-for="speed" />
+            <span asp-validation-for="speed"></span>
+        </div>
+        <div>
+            <label asp-for="sizeOfWheel">Wheel Size:</label>
+            <input asp-for="sizeOfWheel" />
+            <span asp-validation-for="sizeOfWheel"></span>
+        </div>
+        <button type="submit">Create</button>
+    </form>
+    <a asp-action="Index">Back to List</a>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MYCARS.Models.Bike>
+
+<a asp-controller="Home" asp-action="Cars" class="btn btn-primary btn-go-to-cars">Go to Cars</a>
+<a asp-controller="Home" asp-action="Skateboards" class="btn btn-primary btn-go-to-cars">Go to Skateboards</a>
+<a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-go-to-cars">Go to Bikes</a>
+<a asp-controller="Home" asp-action="GenerateReport" class="btn btn-primary btn-go-to-cars">Go to Report</a>
+
+<div class="centered">
+    <h2 class="page-title">Bikes List</h2>
+    <a asp-action="Create" asp-controller="Home" class="btn btn-primary">Create New Bike</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Speed</th>
+                <th>Size Of Wheel</th>
+                <th>Rating</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var bike in Model)
+            {
+                <tr>
+                    <td>@bike.id</td>
+                    <td>@bike.name</td>
+                    <td>@bike.speed</td>
+                    <td>@bike.sizeOfWheel</td>
+                    <td>@bike.raiting</td>
+
+                    <td class="action-buttons">
+                        <a asp-action="Edit" asp-route-id="@bike.id" class="btn btn-sm btn-primary">Edit</a>
+                        <form asp-action="Delete" asp-route-id="@bike.id" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this bike?');">
+                            <button type="submit" class="btn btn-sm delete-button">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
